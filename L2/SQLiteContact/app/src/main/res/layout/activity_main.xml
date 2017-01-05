@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" 
+    android:layout_margin="4dp"
+    >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Contact Name" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Contact Phone"
+        android:inputType="phone" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_below="@+id/editText2"
+        android:onClick="SaveContact"
+        android:text="Save" 
+        android:background="#000"
+        android:textColor="#FFF"/>
+
+    <TextView
+        android:id="@+id/textViewCount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#000"
+        android:gravity="left"
+        android:text=" "
+        android:textColor="#FFF" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/edSearch1"
+        android:background="#000"
+        android:onClick="searchContact"
+        android:text="Search"
+        android:textColor="#FFF" />
+
+    <EditText
+        android:id="@+id/edSearch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/edDelete"
+        android:drawableLeft="@android:drawable/ic_search_category_default"
+        android:ems="10"
+        android:inputType="numberPassword" />
+
+    <EditText
+        android:id="@+id/edDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edSearch1"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/button3"
+        android:ems="10"
+        android:drawableLeft="@android:drawable/ic_search_category_default"
+         />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edDelete"
+        android:layout_alignParentRight="true"
+        android:text="Delete" 
+        android:background="#000"
+        android:textColor="#FFF"
+        android:onClick="deleteContact"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edDelete"
+        android:layout_marginTop="16dp"
+        android:text="Show All Contact"
+        android:background="#000"
+        android:textColor="#FFF"
+        android:onClick="ShowAllContacts" />
+
+</RelativeLayout>
